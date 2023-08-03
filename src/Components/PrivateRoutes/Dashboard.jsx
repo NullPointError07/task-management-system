@@ -9,31 +9,34 @@ const Dashboard = () => {
   const [modalOpen, setModalOpen] = useState(false);
   // State to select which task was clicked by the user
   const [selectedTaskId, setSelectedTaskId] = useState(null);
-  // State to store the selected status for the task
-  const [selectedStatus, setSelectedStatus] = useState(null);
+  // State to store the selected status for each task
+  const [selectedStatusMap, setSelectedStatusMap] = useState({});
 
   // Function to handle the status
   const handleStatus = (taskId) => {
     setSelectedTaskId(taskId);
-    // Set the selectedStatus to the first status of the clicked task
-    const selectedTask = tasks.find((task) => task.id === taskId);
-    setSelectedStatus(selectedTask.status[0]);
     setModalOpen(true); // Open the modal when a task is clicked
   };
 
   // Function to update the task status based on the radio button selection
   const updateTaskStatus = (status) => {
-    setSelectedStatus(status);
+    setSelectedStatusMap((prevMap) => ({
+      ...prevMap,
+      [selectedTaskId]: status,
+    }));
   };
 
-  // Function to close the modal
+  // Function to close the modal and save the updated status
   const closeModal = () => {
     setModalOpen(false);
     // Update the task status with the selected status
-    if (selectedTaskId !== null && selectedStatus !== null) {
+    if (
+      selectedTaskId !== null &&
+      selectedStatusMap[selectedTaskId] !== undefined
+    ) {
       const updatedTasks = tasks.map((task) =>
         task.id === selectedTaskId
-          ? { ...task, status: [selectedStatus] }
+          ? { ...task, status: [selectedStatusMap[selectedTaskId]] }
           : task
       );
       // Here you should update your tasks data, for now, we will log the updatedTasks
@@ -52,7 +55,9 @@ const Dashboard = () => {
                 <p className="text-start my-2">Due Date: {task.due_date}</p>
                 <p className="text-start">
                   Status:{" "}
-                  {selectedStatus !== null ? selectedStatus : task.status[0]}
+                  {selectedStatusMap[task.id] !== undefined
+                    ? selectedStatusMap[task.id]
+                    : task.status[0]}
                   <button
                     onClick={() => handleStatus(task.id)}
                     className="btn btn-xs ml-16"
@@ -88,9 +93,11 @@ const Dashboard = () => {
                               <span className="label-text">{value}</span>
                               <input
                                 type="radio"
-                                name="radio-10"
+                                name={`radio-${selectedTaskId}`}
                                 className="radio checked:bg-red-500"
-                                checked={selectedStatus === value}
+                                checked={
+                                  selectedStatusMap[selectedTaskId] === value
+                                }
                                 onChange={() => updateTaskStatus(value)}
                               />
                             </label>
