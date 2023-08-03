@@ -1,8 +1,27 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  console.log(createUser);
+
   const handleRegister = (event) => {
-    const form = target.event;
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    createUser(email, password, name)
+      .then((result) => {
+        // eslint-disable-next-line no-unused-vars
+        const loggedUser = result.user;
+        form.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -15,7 +34,7 @@ const Register = () => {
             </label>
             <input
               type="text"
-              name="text"
+              name="name"
               placeholder="Enter Your Name"
               className="input input-bordered"
               required

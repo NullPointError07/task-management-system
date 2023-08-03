@@ -1,0 +1,58 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task_name": "Write Research Report",
+      "due_date": "10-08-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    },
+    {
+      "id": 2,
+      "task_name": "Design User Interface",
+      "due_date": "15-08-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    },
+    {
+      "id": 3,
+      "task_name": "Conduct Data Analysis",
+      "due_date": "20-08-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    },
+    {
+      "id": 4,
+      "task_name": "Develop Prototype",
+      "due_date": "25-08-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    },
+    {
+      "id": 5,
+      "task_name": "Review Marketing Strategy",
+      "due_date": "30-08-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    },
+    {
+      "id": 6,
+      "task_name": "Finalize Budget Plan",
+      "due_date": "05-09-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    },
+    {
+      "id": 7,
+      "task_name": "Test Software Release",
+      "due_date": "10-09-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    },
+    {
+      "id": 8,
+      "task_name": "Prepare Presentation",
+      "due_date": "15-09-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    },
+    {
+      "id": 9,
+      "task_name": "Implement Backend Logic",
+      "due_date": "20-08-23",
+      "status": ["Not Started", "In Progress", "Completed"]
+    }
+  ]
+}
