@@ -3,54 +3,72 @@
     {
       "id": 1,
       "task_name": "Write Research Report",
+      "task_description": "Conduct extensive research on the latest industry trends and gather relevant data. Analyze the findings and insights to create a comprehensive research report that highlights key opportunities and challenges. The report will serve as a valuable resource for decision-making and strategic planning.",
+      "assignee": "John Doe",
       "due_date": "10-08-23",
       "status": ["Not Started", "In Progress", "Completed"]
     },
     {
       "id": 2,
       "task_name": "Design User Interface",
+      "task_description": "Collaborate with the design team to create user-friendly mockups and wireframes for the new product's user interface. Incorporate the latest design trends and ensure a seamless user experience. Gather feedback from stakeholders and iterate on the design to achieve a visually appealing and intuitive interface.",
+      "assignee": "Jane Smith",
       "due_date": "15-08-23",
       "status": ["Not Started", "In Progress", "Completed"]
     },
     {
       "id": 3,
       "task_name": "Conduct Data Analysis",
+      "task_description": "Analyze large datasets and apply statistical techniques to uncover valuable insights and patterns. Interpret the results to provide actionable recommendations for optimizing business processes and enhancing overall performance. Visualize the data findings in comprehensive reports and presentations.",
+      "assignee": "Alice Johnson",
       "due_date": "20-08-23",
       "status": ["Not Started", "In Progress", "Completed"]
     },
     {
       "id": 4,
       "task_name": "Develop Prototype",
+      "task_description": "Transform conceptual ideas and wireframes into a functional prototype for the new product. Utilize cutting-edge technologies and development frameworks to create a scalable and high-performance prototype. Collaborate with the development team to iterate on the prototype based on user feedback and performance testing.",
+      "assignee": "Bob Williams",
       "due_date": "25-08-23",
       "status": ["Not Started", "In Progress", "Completed"]
     },
     {
       "id": 5,
       "task_name": "Review Marketing Strategy",
+      "task_description": "Evaluate the current marketing strategy and campaigns to assess their effectiveness. Conduct market research and competitor analysis to identify opportunities for improving brand positioning and customer engagement. Provide strategic recommendations for optimizing marketing efforts and driving brand growth.",
+      "assignee": "Emily Brown",
       "due_date": "30-08-23",
       "status": ["Not Started", "In Progress", "Completed"]
     },
     {
       "id": 6,
       "task_name": "Finalize Budget Plan",
+      "task_description": "Work closely with the finance team to create a detailed budget plan for the upcoming project. Consider various cost elements and allocate resources effectively to ensure financial efficiency and adherence to project timelines. Collaborate with stakeholders to review and finalize the budget for approval.",
+      "assignee": "Michael Wilson",
       "due_date": "05-09-23",
       "status": ["Not Started", "In Progress", "Completed"]
     },
     {
       "id": 7,
       "task_name": "Test Software Release",
+      "task_description": "Thoroughly test the software release for bugs, glitches, and compatibility issues across multiple platforms and devices. Create and execute test cases to validate the functionality and performance of the application. Collaborate with the development team to address and resolve any identified issues.",
+      "assignee": "David Lee",
       "due_date": "10-09-23",
       "status": ["Not Started", "In Progress", "Completed"]
     },
     {
       "id": 8,
       "task_name": "Prepare Presentation",
+      "task_description": "Develop a compelling and informative presentation for the upcoming important meeting. Organize key information, data, and visuals in a clear and concise manner to effectively communicate project progress and outcomes. Rehearse the presentation to ensure a confident and impactful delivery.",
+      "assignee": "Sophia Martin",
       "due_date": "15-09-23",
       "status": ["Not Started", "In Progress", "Completed"]
     },
     {
       "id": 9,
       "task_name": "Implement Backend Logic",
+      "task_description": "Collaborate with the development team to design and implement the backend logic and API for the application. Ensure seamless integration with the frontend and database to deliver a robust and scalable application. Perform rigorous testing and debugging to ensure the backend functionality meets project requirements.",
+      "assignee": "William Anderson",
       "due_date": "20-08-23",
       "status": ["Not Started", "In Progress", "Completed"]
     }

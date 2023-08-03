@@ -9,6 +9,9 @@ import AuthProvider from "./Providers/AuthProvider.jsx";
 import Dashboard, {
   taskLoader,
 } from "./Components/PrivateRoutes/Dashboard.jsx";
+import TaskDetails, {
+  taskDetailsLoader,
+} from "./Components/PrivateRoutes/TaskDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,9 +27,14 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/dashboard",
+        path: "/tasks",
         element: <Dashboard></Dashboard>,
         loader: taskLoader,
+      },
+      {
+        path: "tasks/:id",
+        element: <TaskDetails></TaskDetails>,
+        loader: taskDetailsLoader,
       },
     ],
   },

@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const Dashboard = () => {
   const { id } = useParams();
   const tasks = useLoaderData();
+
+  const navigate = useNavigate();
 
   // State to manage the visibility of the modal
   const [modalOpen, setModalOpen] = useState(false);
@@ -67,7 +69,7 @@ const Dashboard = () => {
                 </p>
                 <div className="card-actions justify-start">
                   <button className="btn btn-sm btn-primary bg-base-400">
-                    View Details
+                    <Link to={task.id.toString()}>View Details</Link>
                   </button>
                 </div>
               </div>
