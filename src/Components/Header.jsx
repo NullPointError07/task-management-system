@@ -27,6 +27,9 @@ const Header = () => {
         <NavLink to="/tasks" className="btn">
           Dashboard
         </NavLink>
+        <button className="btn">
+          <NavLink to="/"> Log Out </NavLink>
+        </button>
         {user ? <></> : <></>}
       </div>
     </div>
