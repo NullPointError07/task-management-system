@@ -1,3 +1,4 @@
+# To Run Resource at localhost, type json-server -w -p 4044 ./public/data.json at the terminal
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
